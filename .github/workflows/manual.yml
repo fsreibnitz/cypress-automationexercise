@@ -40,3 +40,10 @@ jobs:
       with:
         name: relatorio-E2E
         path: ./cypress/reports
+
+    - name: Report HTML Preview
+      id: html_preview
+      uses: pavi2410/html-preview-action@v4
+      with:
+          html_file: './cypress/reports/html/index.html'
+          job_summary: true
