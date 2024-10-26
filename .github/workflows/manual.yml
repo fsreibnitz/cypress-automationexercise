@@ -31,3 +31,6 @@ jobs:
 
     - name: Installing Dependencies
       run: npm install
+    
+    - name: E2E Testing
+      run: npm run cypress
