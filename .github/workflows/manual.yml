@@ -40,7 +40,7 @@ jobs:
       run: npm install
     
     - name: run E2E Smoke test
-      run: npx cypress run --env grepTags="@smoke" --browser= ${{github.event.inputs.choice}}  
+      run: npx cypress run --env grepTags=smoke --browser= ${{github.event.inputs.choice}}  
   
   e2e-test:
         # The type of runner that the job will run on

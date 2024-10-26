@@ -77,7 +77,7 @@ describe('Automation Exercise', () => {
         cy.contains("Signup / Login").should("be.visible")
 
     })
-    it("#5 - Register existing user",()=>{
+    it("Test Case 5 - Register existing user",()=>{
         //Arrange
         const secrets = {name: faker.person.fullName(), email: faker.internet.email(), password: faker.internet.password()}
         cadastro.iniciarCadastro(secrets.name, secrets.email)
@@ -92,7 +92,7 @@ describe('Automation Exercise', () => {
         //Assertion
         cy.contains("form[action='/signup']","Email Address already exist!").should("be.visible")
     })
-    it("#6 - Contact Us Form",()=>{
+    it("Test Case 6 - Contact Us Form",()=>{
         //Arrange
         const user = {name: faker.person.fullName(), email: faker.internet.email()}
        
@@ -105,7 +105,7 @@ describe('Automation Exercise', () => {
 
 
     })
-    it("#8- Verify All Products and product detail page",()=>{
+    it("Test Case 8- Verify All Products and product detail page",()=>{
         //Arrange
         menu.irPara("Products")
         cy.contains("View Product")
