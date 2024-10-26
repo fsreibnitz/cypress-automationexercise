@@ -1,4 +1,6 @@
 /// <reference types="cypress" />
+import registerCypressGrep from '@cypress/grep/src/support'
+registerCypressGrep()
 import cadastro from "../pages/cadastro";
 import login from "../pages/login";
 import menu from "../pages/menu";
@@ -13,7 +15,7 @@ describe('Automation Exercise', () => {
         cy.visit('/')
     })
 
-    it('Test Case 1: Cadastrar um usuário', () => {
+    it('Test Case 1: Cadastrar um usuário',{ tags: 'smoke' }, () => {
         //Arrange
         const secrets = {name: faker.person.fullName(), email: faker.internet.email(), password: faker.internet.password()}
 
