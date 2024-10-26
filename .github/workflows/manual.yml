@@ -42,13 +42,11 @@ jobs:
     - name: run E2E Smoke test
       run: npx cypress run --env grepTags=smoke --browser=${{github.event.inputs.choice}}  
     
-    - name: Report E2E Test - HTML Preview
-      id: html_preview
-      uses: pavi2410/html-preview-action@v4
+    - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        html_file: './cypress/reports/html/index.html'
-        job_summary: true
+        name: relatorio-E2E
+        path: ./cypress/reports
   
   
   deploy:
@@ -81,11 +79,5 @@ jobs:
           name: relatorio-E2E
           path: ./cypress/reports
 
-      - name: Report E2E Test - HTML Preview
-        id: html_preview
-        uses: pavi2410/html-preview-action@v4
-        if: ${{ !cancelled() }}
-        with:
-          html_file: './cypress/reports/html/index.html'
-          job_summary: true
+
  
