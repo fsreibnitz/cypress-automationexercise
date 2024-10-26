@@ -39,4 +39,4 @@ jobs:
       if: ${{ !cancelled() }}
       with:
         name: relatorio-E2E
-        path: ./reports
+        path: ./cypress/reports
