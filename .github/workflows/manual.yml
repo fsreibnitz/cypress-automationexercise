@@ -41,7 +41,7 @@ jobs:
         name: relatorio-E2E
         path: ./cypress/reports
 
-    - name: Report HTML Preview
+    - name: Report E2E Test - HTML Preview
       id: html_preview
       uses: pavi2410/html-preview-action@v4
       with:
