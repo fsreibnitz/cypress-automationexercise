@@ -45,7 +45,7 @@ jobs:
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: relatorio-E2E
+        name: relatorio-Smoke-E2E
         path: ./cypress/reports
   
   
